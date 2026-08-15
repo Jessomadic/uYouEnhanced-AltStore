@@ -5,7 +5,7 @@
   "sourceURL": "https://raw.githubusercontent.com/Jessomadic/uYouEnhanced-AltStore/main/apps.json",
   "subtitle": "A working personal AltStore source for uYouEnhanced.",
   "description": "A personal AltStore source that replaces the upstream preview redirect with the upstream-published direct IPA URL.",
-  "tintColor": "e81e8a",
+  "tintColor": "#e81e8a",
   "iconURL": "https://raw.githubusercontent.com/arichornlover/uYouEnhanced/1314354bff6ef07aca60d7b9a77bd91a5f985ab4/Localizations/uYouPlus.bundle/AppIcons/AppIcon4.png",
   "headerURL": "https://raw.githubusercontent.com/arichornlover/uYouEnhanced/1314354bff6ef07aca60d7b9a77bd91a5f985ab4/Localizations/uYouPlus.bundle/AppIcons/AppIcon4.png",
   "apps": [
@@ -17,7 +17,7 @@
       "subtitle": "uYouPlus with additional features",
       "localizedDescription": "uYouEnhanced combines uYou with SponsorBlock, picture-in-picture options, interface customization, higher-resolution playback options, downloads, and other enhancements.",
       "iconURL": "https://raw.githubusercontent.com/arichornlover/uYouEnhanced/1314354bff6ef07aca60d7b9a77bd91a5f985ab4/Localizations/uYouPlus.bundle/AppIcons/AppIcon4.png",
-      "tintColor": "e81e8a",
+      "tintColor": "#e81e8a",
       "category": "photo-video",
       "version": "20.44.2",
       "versionDate": "2026-02-24",
@@ -30,7 +30,9 @@
           "date": "2026-02-24",
           "localizedDescription": "YouTube 20.44.2 with uYou 3.0.4 and uYouEnhanced features.",
           "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-20442-304.ipa",
-          "size": 134673057
+          "size": 134673057,
+          "sha256": "97a867a179964aeb7e21e1bd069cbfc7681914894a9a89b5654c369be4aed356",
+          "minOSVersion": "16.0"
         }
       ],
       "appPermissions": {
