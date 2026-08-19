@@ -7,7 +7,7 @@ source from the checkmark/Done screen.
 
 ## Install with SideStore
 
-[Open the hosted SideStore installer](https://jessomadic.github.io/uYouEnhanced-AltStore/)
+[Open the hosted SideStore installer](https://jessecopas.com/uYouEnhanced-AltStore/)
 
 The installer uses SideStore's direct-install URL action and bypasses the
 crashing Sources workflow. Open SideStore once, then tap **Install with
