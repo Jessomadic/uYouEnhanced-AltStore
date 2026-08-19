@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17141f">
+  <meta name="description" content="Install the verified uYouEnhanced 20.44.2 IPA directly with SideStore.">
+  <title>uYouEnhanced · SideStore install</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #17141f;
+      --paper: #f7f2f8;
+      --muted: #aaa2b1;
+      --line: #3c3545;
+      --youtube: #ff243d;
+      --tweak: #e81e8a;
+      --ready: #79efb1;
+      --display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, sans-serif;
+      --body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --utility: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: max(24px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom));
+    }
+
+    .route {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--utility);
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ready);
+    }
+
+    .status::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 4px rgba(121, 239, 177, .12);
+      content: "";
+    }
+
+    .hero {
+      padding: 48px 0 30px;
+    }
+
+    .mark {
+      position: relative;
+      display: grid;
+      width: 74px;
+      height: 74px;
+      place-items: center;
+      margin-bottom: 28px;
+      border-radius: 22px;
+      background: var(--youtube);
+      box-shadow: 12px 12px 0 var(--tweak);
+      transform: rotate(-4deg);
+    }
+
+    .mark::after {
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 21px solid white;
+      content: "";
+      transform: translateX(3px);
+    }
+
+    h1 {
+      max-width: 660px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(42px, 11vw, 78px);
+      font-weight: 800;
+      letter-spacing: -.055em;
+      line-height: .94;
+    }
+
+    .lede {
+      max-width: 590px;
+      margin: 24px 0 0;
+      color: #d5cdda;
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .manifest {
+      position: relative;
+      overflow: hidden;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #201b29;
+    }
+
+    .manifest::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 86px;
+      height: 10px;
+      background: repeating-linear-gradient(90deg, var(--youtube) 0 12px, var(--tweak) 12px 24px);
+      content: "";
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-family: var(--utility);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 10px 20px;
+      margin: 0 0 24px;
+    }
+
+    dt {
+      color: var(--muted);
+      font-family: var(--utility);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    dd {
+      min-width: 0;
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-weight: 650;
+    }
+
+    .actions {
+      display: grid;
+      gap: 12px;
+    }
+
+    .button {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 20px;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 760;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 150ms ease, background-color 150ms ease;
+    }
+
+    .button:active { transform: scale(.98); }
+
+    .button:focus-visible {
+      outline: 3px solid var(--ready);
+      outline-offset: 3px;
+    }
+
+    .primary {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .secondary {
+      border-color: var(--line);
+      color: var(--paper);
+    }
+
+    .note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .why {
+      margin-top: 18px;
+      padding: 20px 4px 0;
+      border-top: 1px solid var(--line);
+      color: #c4bccb;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .why strong { color: var(--paper); }
+
+    details {
+      margin-top: 22px;
+      color: var(--muted);
+      font-family: var(--utility);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    summary {
+      cursor: pointer;
+      color: #d8d0dd;
+    }
+
+    code {
+      display: block;
+      margin-top: 10px;
+      overflow-wrap: anywhere;
+      color: var(--ready);
+    }
+
+    @media (min-width: 620px) {
+      main { padding-inline: 32px; }
+      .hero { padding-top: 68px; }
+      .manifest { padding: 30px; }
+      .actions { grid-template-columns: 1.35fr .65fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="route">
+      <span>uYouEnhanced / 20.44.2</span>
+      <span class="status">IPA verified</span>
+    </div>
+
+    <section class="hero" aria-labelledby="title">
+      <div class="mark" aria-hidden="true"></div>
+      <h1 id="title">Install it.<br>Skip Sources.</h1>
+      <p class="lede">This route sends the verified uYouEnhanced IPA straight to SideStore and avoids the source-saving crash in SideStore 0.6.3 on iOS 27.</p>
+    </section>
+
+    <section class="manifest" aria-labelledby="package-heading">
+      <p class="eyebrow" id="package-heading">Direct install manifest</p>
+      <dl>
+        <dt>App</dt><dd>uYouEnhanced</dd>
+        <dt>Version</dt><dd>20.44.2 · uYou 3.0.4</dd>
+        <dt>Device</dt><dd>iPhone · iOS 16 or newer</dd>
+        <dt>Size</dt><dd>134,673,057 bytes</dd>
+      </dl>
+
+      <div class="actions">
+        <a class="button primary" href="sidestore://install?url=https%3A%2F%2Farchive.org%2Fdownload%2FYouTubeRebornPlus_19.10.5-4.2.6%2Fyt-uYE-20442-304.ipa">Install with SideStore</a>
+        <a class="button secondary" href="https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-20442-304.ipa">Download IPA</a>
+      </div>
+
+      <p class="note">Open SideStore once before tapping Install. Keep the SideStore-required VPN and Wi-Fi active during signing.</p>
+
+      <p class="why"><strong>Why this route?</strong> SideStore successfully reads the feed, then its checkmark/Done workflow crashes while saving a custom source. Direct install is an official SideStore URL action and bypasses that failing screen.</p>
+
+      <details>
+        <summary>Package verification</summary>
+        <code>SHA-256 97a867a179964aeb7e21e1bd069cbfc7681914894a9a89b5654c369be4aed356</code>
+      </details>
+    </section>
+  </main>
+</body>
+</html>
